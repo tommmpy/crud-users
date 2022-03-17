@@ -1,9 +1,12 @@
 <div class="top_content">
   <h1 class="content">Usuarios registrados: </h1>
   <%= link_to "Crear un nuevo usuario (clickea aqui)", users_new_path, class: "new_user_button content"%>
+  <%= link_to "Volver a la pagina de inicio", root_path, class: "new_user_button content" %>
 </div>
 <hr>
 <% @users.each do |user| %>
+  <h3>ID: </h3>
+  <%= user.id %>
   <h3>Nombre: </h3>
   <%= user.name %>
   <h3>Informacion del usuario: </h3>
