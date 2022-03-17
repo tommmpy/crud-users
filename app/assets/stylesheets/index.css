@@ -1,0 +1,23 @@
+.top_content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  width: 60%;
+}
+
+.new_user_button {
+  font-size: 1.7rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.content {
+  margin: 20px;
+}
+
+.buttons_footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  width: 14%;
+}

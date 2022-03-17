@@ -1,0 +1,20 @@
+<div class="top_content">
+  <h1 class="content">Usuarios registrados: </h1>
+  <%= link_to "Crear un nuevo usuario (clickea aqui)", users_new_path, class: "new_user_button content"%>
+</div>
+<hr>
+<% @users.each do |user| %>
+  <h3>Nombre: </h3>
+  <%= user.name %>
+  <h3>Informacion del usuario: </h3>
+  <%= user.info %>
+  <h3>Mail de contacto: </h3>
+  <%= user.mail %>
+  <br>
+  <br>
+  <div class="buttons_footer">
+    <%= button_to "Editar usuario", edit_user_path(user), :method => :get %>
+    <%= button_to "Eliminar usuario", user, method: :delete, form: {data: { turbo_confirm: "Estas seguro de que quieres eliminar el usuario #{user.name}?"}}  %>
+  </div>
+  <hr>
+<% end %>

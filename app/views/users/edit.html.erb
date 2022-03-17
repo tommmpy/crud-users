@@ -1,0 +1,18 @@
+<%= form_for @user do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :info %>
+    <%= f.text_area :info %>
+  </div>
+  <div>
+    <%= f.label :mail %>
+    <%= f.text_field :mail %>
+  </div>
+  <div>
+    <%= f.submit "Actualizar datos de usuario", class: "edit_user_button" %>
+    <%= button_to "Menu pricipal", users_path, method: :get %>
+  </div>
+<% end %>

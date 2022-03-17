@@ -1,0 +1,21 @@
+<div class="top_content">
+  <h1 class="content">Rellene las casillas para poder crear un usuario </h1>
+  <%= link_to "Volver al menu principal", users_path, class: "new_user_button content"%>
+</div>
+<%= form_for @user do |f| %>
+  <div>
+    <%= f.label "Nombre del usuario"%>
+    <%= f.text_field :name%>
+  </div>
+  <div>
+    <%= f.label "Informacion del usuario" %>
+    <%= f.text_area :info%>
+  </div>
+  <div>
+    <%= f.label "Mail de contacto del usuario" %>
+    <%= f.text_field :mail%>
+  </div>
+  <div>
+    <%= f.submit "Crear nuevo usuario" %>
+  </div>
+<% end %>
