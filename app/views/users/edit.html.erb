@@ -1,15 +1,15 @@
-<%= form_for @user do |f| %>
+<%= form_for @user, html: {:class => 'edit_form'} do |f| %>
   <div>
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
   <div>
     <%= f.label :info %>
-    <%= f.text_area :info %>
+    <%= f.text_area :info, {:style=>'width: 300px; height: 150px; resize: none;'} %>
   </div>
   <div>
     <%= f.label :mail %>
-    <%= f.text_field :mail %>
+    <%= f.text_field :mail, {:style=>'width: 300px;'} %>
   </div>
   <div>
     <%= f.submit "Actualizar datos de usuario", class: "edit_user_button" %>
